@@ -1,7 +1,7 @@
 # Kuis Pintar
 Kuis Matematika Sederhana yang Membuat Kalian Cerdas!!!
 
-Kuis ini memiliki 5 soal yang akan muncul secara acak. Kalau benar, kalian akan dapat 20 poin!
+Kuis ini memiliki 5 soal yang akan muncul secara acak. Kalau benar, kalian akan dapat 20 poin per soal! </br>
 Kalau tidak, hayoooo
 
 
