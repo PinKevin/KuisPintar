@@ -16,6 +16,7 @@ public class KuisPintarView {
     private Label equationLabel;
     private TextField answerField;
     private Button submitButton;
+    private Button retryButton;
     private Label resultLabel;
     private KuisPintarController controller;
     private int totalScore;
@@ -36,6 +37,19 @@ public class KuisPintarView {
         submitButton = new Button("Submit");
         submitButton.setOnAction(e -> controller.checkAnswer());
 
+        retryButton = new Button("Retry");
+        retryButton.setOnAction(e -> {
+            controller.generateNewEquation();
+            resultLabel.setText("");
+            answerField.setEditable(true);
+            submitButton.setDisable(false);
+            retryButton.setVisible(false);
+            totalScore = 0;
+            questionCount = 0;
+        });
+
+        retryButton.setVisible(false);
+
         resultLabel = new Label();
 
         GridPane gridPane = new GridPane();
@@ -46,6 +60,7 @@ public class KuisPintarView {
         gridPane.add(answerField, 0, 1);
         gridPane.add(submitButton, 1, 1);
         gridPane.add(resultLabel, 0, 2);
+        gridPane.add(retryButton, 1, 2);
 
         VBox root = new VBox(gridPane);
         root.setSpacing(10);
@@ -85,6 +100,7 @@ public class KuisPintarView {
             resultLabel.setText( "Nilai Akhir : " + totalScore );
             answerField.setEditable( false );
             submitButton.setDisable( true );
+            retryButton.setVisible(true);
         } else {
             controller.generateNewEquation();
         }
