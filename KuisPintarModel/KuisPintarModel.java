@@ -2,7 +2,7 @@ package KuisPintarModel;
 
 import java.util.Random;
 
-public class KuisPintarModel {
+public class KuisPintarModel IKuisPintarModel{
     private int minNumber = 1;
     private int maxNumber = 20;
     private int firstNumber;
