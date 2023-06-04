@@ -12,7 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class KuisPintarView {
+public class KuisPintarView implements IKuisPintarView{
     private Label equationLabel;
     private TextField answerField;
     private Button submitButton;
